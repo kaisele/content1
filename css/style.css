@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: rgb(0, 225, 255);
+  border-bottom: 2px solid rgb(0, 201, 228);
+  z-index: 100;
+}
+.header a {
+  color: #fff;
+}
+.header_title {
+  margin-left: 20px;
+  line-height: 60px;
+  font-style: oblique;
+  text-shadow: 0 1px 1px #000;
+  white-space: nowrap;
+}
+.menu_box {
+  display: flex;
+  margin-right: 20px;
+  margin-left: auto;
+  line-height: 60px;
+}
+.menu {
+  list-style: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.menu:hover {
+  text-decoration: underline;
+}
+
+
+
+.main_logo_box {
+  position: fixed;
+  top: 62px;
+  width: 100%;
+  height: 360px;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.main_svg {
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.letter {
+  fill: #fff;
+  fill-opacity: 0;
+}
+.letter.fill_color {
+  animation-name: fill_anime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes fill_anime {
+  0% {
+    fill: #fff;
+  }
+  100% {
+    fill: rgb(72, 255, 0);
+    fill-opacity: 1;
+  }
+}
+
+
+
+.back_img1 {
+  position: fixed;
+  right: -250px;
+  bottom: -100px;
+  width: 500px;
+  height: 500px;
+  background-image: url(../image/back_img.png);
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -100;
+}
+.back_img2 {
+  position: fixed;
+  left: -250px;
+  top: 250px;
+  width: 500px;
+  height: 500px;
+  background-image: url(../image/back_img.png);
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -100;
+}
+
+
+
+.adjustment_box {
+  width: 100%;
+  height: 400px;
+}
+
+
+main {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 800px;
+  word-break: break-word;
+}
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+
+}
+
+/* 上下のアニメーション*/
+.downAnime{
+    opacity: 0;/* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+    animation-name:slideTextY100;
+    animation-duration:0.8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY100 {
+    from {
+        transform: translateY(100%);/* 要素を上の枠外に移動*/
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);/* 要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+.slideAnimeUpDown {
+    animation-name:slideTextY-100;
+    animation-duration:0.8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+    from {
+        transform: translateY(-100%);/* 要素を下の枠外に移動*/
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);/* 要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+.text_content {
+  text-align: center;
+  line-height: 35px;
+}
+
+.content {
+  position: relative;
+  margin-top: 50px;
+  height: 300px;
+  background:rgba(201, 255, 180, 0.8);
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+}
